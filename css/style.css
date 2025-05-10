@@ -1,0 +1,343 @@
+/* Algemene opmaak */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #ECF0EF;
+  color: #0D0D0D;
+  line-height: 1.6;
+}
+
+/* Opmaak header */
+header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 2em;
+  background-color: #ECF0EF;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+/* Opmaak algemene nav */
+nav.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.6em 1.4em;
+  font-size: 2em;
+  font-weight: bold;
+  text-decoration: none;
+  color: #008DC4;
+  background-color: transparent;
+  border-radius: 999px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #008DC4;
+  color: white;
+}
+
+.nav-link.active {
+  color: white;
+  background-color: #0D0D0D;
+}
+
+
+/* Opmaak nav portfolio */
+.btn-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5em;
+  max-width: 1000px;
+  margin: 4em auto;
+  padding: 0 1em;
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 1.4em 2em;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  background-color: #008DC4;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #0D0D0D;
+  color: white;
+}
+
+.btn.active {
+  background-color: #0D0D0D;
+  color: white;
+}
+
+
+/* Opmaak profielfoto */
+.photo-container {
+  display: flex;
+  align-items: center;
+}
+
+.profile-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #008DC4;
+}
+
+/* Opmaak titels */
+
+.page-subtitle {
+  text-align: center;
+  width: 100%;
+  padding: 0 1em;
+  box-sizing: border-box;
+  font-size: 1.5em;
+  color: #0D0D0D;
+  font-weight: normal;
+  margin-bottom: 2em;
+}
+
+.page-title {
+  text-align: center;
+  width: 100%;
+  padding: 0 1em;
+  box-sizing: border-box;
+  font-size: 2.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.2em;
+  color: #0D0D0D;
+}
+
+/* Opmaak main */
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2em;
+  max-width: 1800px;
+  margin: 0 auto 3em auto;
+  padding: 0 1em;
+  flex: 1;
+}
+
+main article {
+  flex: 1;
+  max-width: 55%;
+}
+
+main article p {
+  margin-bottom: 1.5em;
+  text-align: left;
+  font-size: 1.3em;
+}
+
+main center {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 4em;
+}
+
+/* Opmaak foto's */
+aside.project-photo-frame {
+  flex: 1;
+  max-width: 45%;
+}
+
+.foto-blok {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.foto-blok img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.foto-blok figcaption {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  background-color: #008DC4;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+
+/* Contactformulier */
+.contact-form {
+  width: 90%;
+  max-width: 900px;
+  margin: 4em auto;
+  padding: 3vw;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.contact-form label {
+  font-weight: bold;
+  font-size: clamp(1.1em, 2vw, 1.5em);
+  color: #0D0D0D;
+}
+
+.contact-form input {
+  width: 100%;
+  padding: 1em;
+  font-size: clamp(1em, 2vw, 1.3em);
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  width: 100%;
+  padding: 1em;
+  font-size: clamp(1em, 2vw, 1.3em);
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.contact-form button {
+  align-self: flex-start;
+  padding: 1em 2em;
+  font-size: clamp(1em, 2vw, 1.3em);
+  background-color: #008DC4;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form h1 {
+  text-align: center;
+  font-size: clamp(2em, 4vw, 3em);
+  margin-bottom: 0.5em;
+  color: #0D0D0D;
+}
+
+.contact-form p {
+  text-align: center;
+  font-size: clamp(1em, 2.5vw, 1.5em);
+  margin-bottom: 2em;
+  color: #555;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.contact-form button:hover {
+  background-color: #0D0D0D;
+}
+
+/* Mobiele versie */
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main article,
+  aside.project-photo-frame {
+    max-width: 100%;
+  }
+
+  .logo {
+    width: 180px;
+  }
+
+  .profile-photo {
+    width: 130px;
+    height: 130px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .nav-link {
+    font-size: 1.1em;
+  }
+
+  .page-title {
+    font-size: 2em;
+    margin-top: 6vh;
+  }
+
+  .page-subtitle {
+    font-size: 1.3em;
+  }
+
+  nav.nav-center {
+    position: static;
+    transform: none;
+    margin-top: 1em;
+  }
+    .btn-group {
+      grid-template-columns: 1fr;
+    }
+  }
